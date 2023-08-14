@@ -1,0 +1,116 @@
+* {
+    margin: 10px;
+    border-radius: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+}
+
+.sidebar {
+    border: 1px solid black;
+    /* display: grid; */
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* border: 1px solid black; */
+
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.topbar {
+    border: 1px solid black;
+
+}
+
+.main {
+    background-color: #e2e8f0;
+    /* grid-column-start: 2; */
+    /* border: 1px solid black; */
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; */
+}
+
+.extra {
+    background-color: #e2e8f0;
+    display: grid;
+    /* border: 1px solid red; */
+    /* grid-column-start: ;
+    grid-column-end: 3; */
+}
+
+.cardbox {
+    background-color: #e2e8f0;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+
+}
+
+.cards {
+    display: grid;
+    background-color: #e2e8f0;
+    grid-template-columns: 3fr 1fr;
+    /* grid-template-columns: 4fr 2fr; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: ; */
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    background-color: white;
+    /* grid-column-start: 1; */
+    height: 200px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card .title {
+    font-weight: bold;
+}
+
+
+.announcements,
+.trending {
+    background-color: white;
+
+
+
+}
+
+.trending {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    /* border: 1px solid red; */
+    background-color: white;
+    /* grid-column-start: 1; */
+    /* height: 200px; */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.trending:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
