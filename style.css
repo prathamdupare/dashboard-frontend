@@ -1,38 +1,186 @@
 * {
     margin: 10px;
-    border-radius: 7px;
+    /* border-radius: 7px; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* border: 1px solid black; */
     /* padding: 10px; */
 }
 
+body {
+    margin: 0px;
+}
+
+html {
+    margin: 0px;
+}
+
 .container {
+    margin: 0px;
+    background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
 }
 
 .sidebar {
-    border: 1px solid black;
-    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgb(32, 33, 33);
+    border-radius: 7px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     /* border: 1px solid black; */
 
 }
+
+
 
 .sidebar ul {
     list-style: none;
 }
 
+.sidebar ul li {
+    display: flex;
+}
+
+
+.sidebar ul li img {
+    height: 20px;
+}
+
+
+
+
+li:hover {
+
+    color: #2980b9;
+    font-weight: bold;
+}
+
 .topbar {
-    border: 1px solid black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 7px;
 
 }
 
+
+.topbar .upper-part {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-div img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+
+
+.right-div {
+    display: flex;
+    align-items: center;
+}
+
+.right-div img {
+    height: 30px;
+    border-radius: 100%;
+}
+
+.right-div img:hover {
+    border: 2px solid skyblue;
+}
+
+.upper-part .search {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(206, 238, 250);
+    /* border: 3px solid #3498db; */
+    outline: none;
+    padding-left: 10px;
+    width: 600px;
+    font-size: 16px;
+    transition: border-color 0.6s ease;
+    outline: none;
+}
+
+.upper-part .search:active {
+    border: 2px solid #3498db;
+
+}
+
+.upper-part .search:focus {
+    border: 2px solid #3498db;
+
+}
+
+.upper-button {
+    padding: 3px;
+}
+
+
+.lower-part {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.lower-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lower-text img {
+    height: 7vh;
+    border: 4px solid rgb(84, 203, 250);
+    border-radius: 100%;
+}
+
+.lower-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #3498db;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.lower-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.lower-button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(52, 152, 219, 0.5);
+}
+
+.lower-button:active {
+    background-color: #1f6096;
+    transform: translateY(0);
+}
+
 .main {
+    border-radius: 7px;
     background-color: #e2e8f0;
     /* grid-column-start: 2; */
     /* border: 1px solid black; */
@@ -41,6 +189,7 @@
 }
 
 .extra {
+    border-radius: 7px;
     background-color: #e2e8f0;
     display: grid;
     /* border: 1px solid red; */
@@ -58,6 +207,7 @@
 }
 
 .cards {
+
     display: grid;
     background-color: #e2e8f0;
     grid-template-columns: 3fr 1fr;
@@ -67,13 +217,16 @@
 }
 
 .card {
+    border-radius: 7px;
+    font-size: smaller;
     display: flex;
     justify-content: center;
+    border-left: 5px solid skyblue;
     flex-direction: column;
     /* border: 1px solid red; */
     background-color: white;
     /* grid-column-start: 1; */
-    height: 200px;
+    height: 250px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 
@@ -89,8 +242,23 @@
 }
 
 
+.card-share {
+    display: flex;
+    justify-content: right;
+
+}
+.card-share img {
+    height: 20px;
+
+}
+
+
 .announcements,
 .trending {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
 
 
@@ -98,11 +266,13 @@
 }
 
 .trending {
+    border-radius: 7px;
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
     /* border: 1px solid red; */
-    background-color: white;
+    background-color: rgb(214, 240, 250);
+    border-left: 5px solid skyblue;
     /* grid-column-start: 1; */
     /* height: 200px; */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
